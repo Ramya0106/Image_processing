@@ -1,0 +1,17 @@
+{% extends "project/base.html" %}
+{% block body_block %}
+    <div class="container">
+        <div class = "row">
+            {% for image_info in Image_Extract %}
+                <div class = "col-xl-4 col-lg-4 col-md-4- col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="/media/{{image_info.image}}" alt = "{{img.seat_no}}" height="300"/>
+                        <div class="card-body">
+                            <a href ="/image/{{image_info.pk}}"><p class="card-text align-middle">Seat No:{{image_info.seat_no}}</p></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
